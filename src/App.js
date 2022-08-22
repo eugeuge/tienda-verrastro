@@ -1,16 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
-import Menu from './components/Menu/Menu';
+import NavBar from './components/NavBar/NavBar';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer.jsx';
 
 function App() {
   return (
     
     <div className="App">
-      <Menu></Menu>
-      <header className="App-header">
+      <NavBar/>
+      <ItemListContainer greeting="Hola, bienvenido a tu nueva tienda favorita"></ItemListContainer>
+    {/*     <header className="App-header">
+      
       
         
         <img src={logo} className="App-logo" alt="logo" />
+        
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -22,7 +26,7 @@ function App() {
         >
           Learn React with coderhouse
         </a>
-      </header>
+  </header> */}
     </div>
   );
 }

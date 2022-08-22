@@ -1,0 +1,20 @@
+.containerCarrito{
+    display:flex;
+    flex-direction: row;
+    max-width: 3;
+}
+.containerCarrito .cart{
+  max-width: 3rem;
+}
+
+.containerCarrito .cart img{
+    width: 2rem !important;
+}
+
+.containerCarrito .items{
+display:flex;
+align-items: center;
+margin-left: 0.5rem !important;
+font-size: 1.3rem   !important;
+margin-bottom: 0   !important;
+}
