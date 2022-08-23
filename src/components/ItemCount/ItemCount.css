@@ -1,0 +1,36 @@
+.containerContador{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 20rem;
+    background-color: #ffffff;
+    border-radius: 5%;
+    margin:1.5rem;
+}
+
+.containerContador .contador{
+    font-size: 1.1rem;
+    padding: 0.7rem;
+    margin-bottom: 0;
+    color:grey;
+}
+
+.containerContador .masYmenos {
+    display:flex;
+    flex-direction: row;
+    color:grey;
+}
+
+.containerContador .masYmenos .mas{
+min-width: 3rem;
+margin: 0 1rem 0.7rem 0.9rem;
+}
+
+.containerContador .masYmenos .menos{
+    min-width: 3rem;
+    margin: 0  0.9rem 0.7rem 1rem;
+    }
+
+.containerContador .agregarCarrito{
+    margin: 0.5rem;
+}
