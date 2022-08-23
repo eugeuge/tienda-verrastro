@@ -27,7 +27,7 @@ function ItemCount({stock, initial, onAdd}) {
            <Button onClick={incrementarContador} variant="outline-secondary" className="mas">+</Button>
            <Button onClick={decrementarContador} variant="outline-secondary" className="menos">-</Button>
            </div>
-           <Button onClick={() => (onAdd(contador))}variant="primary" className="agregarCarrito">Agregar al carrito</Button>
+           <Button onClick={stock>0 ? (() => (onAdd(contador))) : undefined} variant={stock>0 ? "primary" : "secondary"} className="agregarCarrito">Agregar al carrito</Button>
 
         </div>
         
