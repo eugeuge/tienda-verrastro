@@ -1,5 +1,6 @@
 import './ItemListContainer.css';
 import ItemCount from '..//ItemCount/ItemCount.jsx';
+import ItemList from '..//ItemList/ItemList.jsx';
 
 function ItemListContainer({greeting}) {
     const agregarAlCarrito = (contador) =>{
@@ -11,6 +12,7 @@ function ItemListContainer({greeting}) {
        
         <p className="greeting">{greeting}</p>
         <ItemCount stock={10} initial={1} onAdd={agregarAlCarrito}/>
+        <ItemList/>
     </div>
             
     )
