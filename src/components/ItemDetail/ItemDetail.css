@@ -1,0 +1,35 @@
+.itemDetail{
+    margin-top: 2rem;
+    display:flex;
+    justify-content: left;
+    width: 500px;
+    color:  grey;
+}
+
+h2{
+    color:  grey;
+}
+
+.itemDetail img {
+    width: 70%;
+    vertical-align: left !important;
+}
+
+.detail {
+    display: flex;
+    flex-direction: column;
+    min-width: 15rem;
+    margin: 0 5rem;
+    justify-content: space-around;
+}
+
+.itemContainer {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:grey;
+    min-width: 20rem;
+    background-color: #fafafa;
+    padding: 2rem 0;
+}

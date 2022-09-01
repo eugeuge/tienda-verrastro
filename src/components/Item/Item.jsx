@@ -1,5 +1,6 @@
 import React from 'react'
 import './Item.css'
+import Button from 'react-bootstrap/Button';
 
 const Item = ({data}) => {
   return (
@@ -8,6 +9,7 @@ const Item = ({data}) => {
                     <img src={data.img} alt="" />
                     <p className="nombre">{data.name}</p>
                     <p className="precio">$ {data.price} </p>
+                    <Button variant="primary" className="detalle">Ver Detalle</Button>
                 </div>
     </div>
   )
