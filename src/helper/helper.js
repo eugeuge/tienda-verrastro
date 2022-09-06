@@ -14,8 +14,8 @@ const fotos = [
         autor: 'Eleonora Lam',
         price: 1800,
         description: 'Mujer bajo el agua',
-        genre: 'arty',
-        categoria: 'fine print',
+        categoria: 'arty',
+        idcategoria: 1,
 
     },
 
@@ -26,8 +26,8 @@ const fotos = [
         autor: 'Eleonora Lam',
         price: 700,
         description: 'Flores en jarrón',
-        genre: 'nature',
-        categoria: 'fine print',
+        categoria: 'nature',
+        idcategoria: 2,
     },
 
     {
@@ -37,8 +37,8 @@ const fotos = [
         autor: 'Cesar Usuri',
         price: 3000,
         description: 'Baño tradicional indio',
-        genre: 'documental',
-        categoria: 'fine print',
+        categoria: 'documental',
+        idcategoria: 3,
     },
 
     {
@@ -48,8 +48,8 @@ const fotos = [
         autor: 'Mario Domp',
         price: 600,
         description: 'Niebla en el Monte Tibi',
-        genre: 'nature',
-        categoria: 'fine print',
+        categoria: 'nature',
+        idcategoria: 2,
     },
 
     {
@@ -59,8 +59,8 @@ const fotos = [
         autor: 'Mario Domp',
         price: 1700,
         description: 'La soledad del viaje',
-        genre: 'documental',
-        categoria: 'fine print',
+        categoria: 'documental',
+        idcategoria: 3,
     },
 
     {
@@ -70,8 +70,8 @@ const fotos = [
         autor: 'Eleonora Lam',
         price: 600,
         description: 'Cielo nocturno estrellado',
-        genre: 'nature',
-        categoria: 'fine print',
+        categoria: 'nature',
+        idcategoria: 2,
     },
 ]
 
