@@ -1,0 +1,32 @@
+.cartItemContainer{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    margin: 1rem 2rem;
+    color:grey;
+    background-color: #fafafa;
+    vertical-align: middle;
+
+}
+
+.cartItemContainer p{
+    margin: 0.5rem 2rem 0.5rem 1rem !important;
+    text-align: center;
+    vertical-align: middle;
+    width: 15%;
+    font-size: 1.2rem;
+    font-weight: 450;
+}
+
+.botonEliminar{
+    max-height: 3rem !important;
+    margin: 0 2rem;
+}
+
+.cartItemContainer img{
+
+    margin:0 2rem;
+    width: 15%;
+}

@@ -1,10 +1,14 @@
 import ItemCount from '../ItemCount/ItemCount.js'
+import { useContext } from 'react';
+import { CartContext } from '../../context/CartContext';
 import './ItemDetail.css'
 
 const ItemDetail = ({data}) => {
+    const {addProduct} = useContext(CartContext);
 
 const agregarAlCarrito = (contador) =>{
-    console.log(`has agregado ${contador} items al carrito`)
+    const newProduct={...data, quantity:contador}
+    addProduct(newProduct)
 
 }
 
