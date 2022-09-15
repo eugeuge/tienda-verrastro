@@ -15,7 +15,6 @@ const fotos = [
         price: 1800,
         description: 'Mujer bajo el agua',
         categoria: 'arty',
-        idcategoria: 1,
 
     },
 
@@ -27,7 +26,6 @@ const fotos = [
         price: 700,
         description: 'Flores en jarrón',
         categoria: 'nature',
-        idcategoria: 2,
     },
 
     {
@@ -38,7 +36,6 @@ const fotos = [
         price: 3000,
         description: 'Baño tradicional indio',
         categoria: 'documental',
-        idcategoria: 3,
     },
 
     {
@@ -49,7 +46,6 @@ const fotos = [
         price: 600,
         description: 'Niebla en el Monte Tibi',
         categoria: 'nature',
-        idcategoria: 2,
     },
 
     {
@@ -60,7 +56,6 @@ const fotos = [
         price: 1700,
         description: 'La soledad del viaje',
         categoria: 'documental',
-        idcategoria: 3,
     },
 
     {
@@ -71,7 +66,6 @@ const fotos = [
         price: 600,
         description: 'Cielo nocturno estrellado',
         categoria: 'nature',
-        idcategoria: 2,
     },
 ]
 

@@ -14,6 +14,7 @@ function CartItem({item}) {
           <p>Fotografía: {item.name}</p>
           <p>Precio: ${item.price}</p>
           <p>Cantidad: {item.quantity}</p>
+          <p>Total: ${item.totalParcial}</p>
           <Button onClick={()=> removeItem(item.id)} className="botonEliminar" variant="danger">Eliminar</Button>
           
         </div>

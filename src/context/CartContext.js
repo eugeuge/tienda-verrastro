@@ -5,6 +5,7 @@ export const CartContext = createContext();
 export const CartProvider = ({children})=>{
     const [productCartList, setProductCartList] = useState([]);
 
+
     const isInCart = (id) =>{
         const elemIndex = productCartList.findIndex(product => product.id === id);
         if (elemIndex >= 0) {
@@ -19,6 +20,7 @@ export const CartProvider = ({children})=>{
         if (inCartProd.exists){
             const productListCopy = [...productCartList];
             productListCopy[inCartProd.index].quantity = productListCopy[inCartProd.index].quantity + product.quantity;
+            productListCopy[inCartProd.index].totalParcial = productListCopy[inCartProd.index].totalParcial + product.totalParcial;
             setProductCartList(productListCopy)
         } else {
         const newList = [...productCartList,product];
@@ -36,8 +38,20 @@ export const CartProvider = ({children})=>{
         setProductCartList([])
     }
 
+    const getCantProducts = () => {
+        const cantProducts = productCartList.reduce((acc,item)=> acc + item.quantity,0)
+        return cantProducts
+
+    }
+
+
+    const getTotalCompra = () => {
+        const totalCompra = productCartList.reduce((acc,item)=> acc + item.price * item.quantity,0)
+        return totalCompra
+    }
+
     return(
-        <CartContext.Provider value={{addProduct,productCartList, clearCart, removeItem, isInCart }}>
+        <CartContext.Provider value={{addProduct,productCartList, clearCart, removeItem, isInCart, getCantProducts, getTotalCompra}}>
             
             {children}
         </CartContext.Provider>
