@@ -3,5 +3,5 @@
 Halurä es una tienda donde se pueden comprar fotografías de manera 100% online.
 
 # Status
-Ultima entrega actualizada: Clase 10 - Técnicas de Rendering.
+Ultima entrega actualizada: Clase 11 - Firebase.
 

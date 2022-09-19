@@ -1,32 +1,40 @@
 import {useState,useEffect} from 'react'
-import obtenerItems from '../../helper/helper.js'
 import './ItemListContainer.css';
 import ItemList from '../ItemList/ItemList.js';
 import {useParams} from 'react-router-dom';
+import {collection, getDocs, query, where} from 'firebase/firestore'
+import {db} from '../../utils/firebase'
 
 function ItemListContainer() {
-    const categoria = useParams()
-    // Puse estos console.log() porque me volví loca tratando de === estos valores a los que obtenía del data,
-    // hasta que me di cuenta que (entiendo que debe ser por usar bootstrap) el useParams me devuelve un objeto.
-    console.log(categoria)
-    console.log(categoria.categoria)
-
-    const idCategoria = categoria.categoria
+    const categoriaParam = useParams()
+    const idCategoria = categoriaParam.categoria
     const [data,setData] = useState([])
     const [loading,setLoading] = useState(true)
 
+
     useEffect(()=> {
-        obtenerItems.then(data => {
-            if (!idCategoria){
-                setData(data)
-                setLoading(false)
-            } else {
-            const productosPorCategoria = data.filter( producto => producto.categoria === idCategoria )
-            setData(productosPorCategoria)
-            setLoading(false)
+
+    const getProductos = async () => {
+        try{
+            let queryRef = !idCategoria ? collection(db,"items") : query(collection(db,"items"),where("categoria","==", idCategoria));
+            const response = await getDocs(queryRef);
+            const productos = response.docs.map (prod => {
+                const newProd = {
+                    ...prod.data(),
+                    id: prod.id
+                }
+                return newProd;
+            })
+            setData(productos);
+            setLoading(false);
+            
+        } catch (error) {
+            console.log(error);
         }
-        })
-    }, [idCategoria])
+        
+    }
+    getProductos();
+    }, [idCategoria]);
 
     return(
     <div className="containerItemList">
