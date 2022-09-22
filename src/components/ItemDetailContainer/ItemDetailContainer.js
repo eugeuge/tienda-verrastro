@@ -1,26 +1,28 @@
 import React from 'react'
 import {useState,useEffect} from 'react'
-import obtenerItems from '../../helper/helper.js'
 import ItemDetail from '../ItemDetail/ItemDetail'
 import './ItemDetailContainer.css'
 import {useParams} from 'react-router-dom';
+import {doc, getDoc} from 'firebase/firestore';
+import {db} from '../../utils/firebase';
 
 
 const ItemDetailContainer = () => {
 const {id} = useParams()
-console.log(id)
-console.log(typeof id)
-
 
 const [data, setData] = useState({})
 const [loading, setLoading] = useState(true)
 
 useEffect(()=> {
-  obtenerItems
-  .then(response => {
-      setData(response.find(prod => prod.id === parseInt(id)))
-      setLoading(false)
-  })
+const queryRef = doc(db, "items" , id)
+getDoc(queryRef).then(response=>{
+  const newDoc = {
+    ...response.data(),
+    id: response.id
+  }
+  setData(newDoc)
+  setLoading(false)
+}).catch(error=>console.log(error))
 }, [id])
 
   return (
