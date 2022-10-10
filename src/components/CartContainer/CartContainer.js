@@ -35,8 +35,6 @@ function CartContainer() {
     handleShow()
   }
 
-    
-
     return(
     <div className='cart'>
     <div>

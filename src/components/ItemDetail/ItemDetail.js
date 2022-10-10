@@ -42,9 +42,6 @@ const agregarAlCarrito = (contador) =>{
 
                 </div>
 
-
-
-        
     </div>
   )
 }

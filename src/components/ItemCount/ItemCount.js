@@ -17,8 +17,6 @@ function ItemCount({stock, initial, onAdd}) {
        }            
     }
 
-
-
     return(
         <div className="containerContador">
 

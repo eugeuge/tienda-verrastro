@@ -6,7 +6,6 @@ import {useParams} from 'react-router-dom';
 import {doc, getDoc} from 'firebase/firestore';
 import {db} from '../../utils/firebase';
 
-
 const ItemDetailContainer = () => {
 const {id} = useParams()
 
